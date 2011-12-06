@@ -1,0 +1,6 @@
+.*.log
+.*.o
+.tar.gz
+.tar
+\\.svn.*
+

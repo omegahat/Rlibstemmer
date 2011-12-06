@@ -1,0 +1,18 @@
+Version 0.2-1
+
+	*  copy the libstemmer files in src/ for a more traditional build.
+
+Version 0.2-0
+
+	*  Handle encoding in new ways
+	    Detect encoding from the inputs.
+	    Preserve encoding in the vector returned from wordStem().
+	
+Version 0.1-2
+
+	*  Added the documentation (taken from Rstem)
+
+	*  Further modifications to building the 3rd party libstemmer.a
+Version 0.1-1
+
+	* configure builds the 3rd party libstemmer.a library

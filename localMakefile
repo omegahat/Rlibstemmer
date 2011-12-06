@@ -1,0 +1,18 @@
+include inst/libstemmer_c/mkinc.mak
+
+LOCAL=$(shell basename $(snowball_headers)) $(shell basename $(snowball_sources))
+HEADERS= runtime/header.h runtime/api.h libstemmer/modules.h libstemmer/modules_utf8.h
+
+HEADER_NAMES=$(shell basename $(HEADERS))
+
+copy:
+	cp $(snowball_headers:%=inst/libstemmer_c/%) $(snowball_sources:%=inst/libstemmer_c/%) src
+
+#	cp $(HEADERS:%=inst/libstemmer_c/%) src
+
+remove:
+	rm $(LOCAL:%=src/%) 
+
+#$(addprefix src/, $(HEADER_NAMES))
+
+

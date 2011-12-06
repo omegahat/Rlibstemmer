@@ -1,0 +1,21 @@
+AC_INIT(src/stemWords.c)
+
+#(cd inst/libstemmer_c ;  make)
+
+make -f localMakefile copy
+
+
+if test  -z "abc" ; then
+cp `find inst/libstemmer_c/include inst/libstemmer_c/libstemmer inst/libstemmer_c/src_c inst/libstemmer_c/runtime -name '*.[c]' -not -path '*svn*'` src/
+
+cp inst/libstemmer_c/runtime/header.h src/
+cp ./inst/libstemmer_c/runtime/api.h src/
+cp ./inst/libstemmer_c/libstemmer/modules.h src/
+
+cp ./inst/libstemmer_c/libstemmer/*.h src/
+cp inst/libstemmer_c/src_c/*.h src/
+
+#mkdir src/include
+#cp -r inst/libstemmer_c/include  src
+fi
+

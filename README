@@ -1,0 +1,19 @@
+This is currently a very hastily thrown together interface to libstemmer_c,
+the C version of Snowball for word stemming from Dr. Martin Porter.
+
+This can replace the R package Rstem in the future and the API is
+almost identical. The only difference is that one can specify the 
+encoding of the inputs, but don't have to.
+ 
+ * This still needs some work to do the right thing in different places.
+
+In the near future, we will add facilities to have sb_stemmer objects
+as external pointers.  This will avoid recreating them and more
+importantly ensure they are deleted in the event of an error in the C
+code.
+
+The available stemming algorithms can be queried using the R function
+getStemLanguages().
+
+Stemming a vector of words is done via wordStem()
+
